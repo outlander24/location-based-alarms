@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainAct" >
+
+    <Button
+        android:id="@+id/btnSetAlarm"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnFindThis"
+        android:onClick="OnClickSetAlarm"
+        android:text="Set Alarm" />
+
+    <Button
+        android:id="@+id/btnFindThis"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnSetAlarm"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnSetAlarm"
+        android:onClick="OnClickFind"
+        android:text="Find"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/AddBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnSetAlarm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/btnFindThis"
+        android:layout_toLeftOf="@+id/btnSetAlarm"
+        android:hint="Find a Place and then click Set Alarm. "
+        android:inputType="textMultiLine"
+        android:lines="4" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AddBar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnSetAlarm"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+</RelativeLayout>

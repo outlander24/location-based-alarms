@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+   <item
+        android:title="Alarms"
+        android:id="@+id/alarms"
+        android:onClick="onClickAlarms"
+       />
+	<item
+        android:title="About us"
+        android:id="@+id/aboutUs"
+        android:onClick="onClickAboutUs"
+       />
+	<item
+        android:title="Exit"
+        android:id="@+id/exit"
+        android:onClick="onClickExit"
+       />
+
+</menu><!-- From: file:/Users/ashish/Dropbox%20(Personal)/Location%20Based%20to-do%20Reminder/app/src/main/res/menu/main.xml -->

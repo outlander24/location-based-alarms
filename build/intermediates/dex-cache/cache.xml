@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\ashishtotla\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\pre-dexed\debug\gson-2.3.1-83b33a32fc078926dfcc3077c8bea1cb4341d82d.jar" />
+    </item>
+    <item
+        jar="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\pre-dexed\debug\classes-b71e639f712d49ee43b2c22cf6b81b2ed4143265.jar" />
+    </item>
+    <item
+        jar="C:\Users\ashishtotla\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\pre-dexed\debug\library-2.4.0-5cd5df8a579f1c73f5681864a7a7d2a64e7082f9.jar" />
+    </item>
+    <item
+        jar="F:\Android SDK\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-c6632af98e8845808a16efb4007e5ad8d3b19179.jar" />
+    </item>
+    <item
+        jar="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\pre-dexed\debug\classes-461049ec5e7159679a6524d58803241d15769f16.jar" />
+    </item>
+    <item
+        jar="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\pre-dexed\debug\classes-9df474e75190226e12c1f7b643fc57481f9c7ae1.jar" />
+    </item>
+    <item
+        jar="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\pre-dexed\debug\classes-87becfeae496584f8de3a9324454447710dd72f6.jar" />
+    </item>
+    <item
+        jar="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\MyDropbox\Dropbox\Location Based to-do Reminder\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ef02df5b7f2e622d09f8de5c01693a55609e9c03.jar" />
+    </item>
+
+</items>

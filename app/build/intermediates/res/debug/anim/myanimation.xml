@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1"
+        android:duration="500" >
+
+    </alpha>
+
+    <translate
+        android:fromXDelta="-100"
+        android:toXDelta="0"
+        android:duration="500">
+
+    </translate>
+</set><!-- From: file:/Users/ashish/Dropbox%20(Personal)/Location%20Based%20to-do%20Reminder/app/src/main/res/anim/myanimation.xml -->

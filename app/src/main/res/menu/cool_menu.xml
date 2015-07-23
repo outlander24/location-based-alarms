@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+ 	
+    <item
+        android:title="Set new Alarm"
+        android:id="@+id/setalarm"
+       />
+
+	<item
+        android:title="Rate and Review"
+        android:id="@+id/rateandreview"
+       />
+   	<item
+        android:title="Exit"
+        android:id="@+id/exit"
+       />
+	
+</menu>
