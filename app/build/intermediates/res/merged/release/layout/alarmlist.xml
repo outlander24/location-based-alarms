@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+    
+</ExpandableListView>
+<!-- From: file:/Users/ashish/Dropbox%20(Personal)/Location%20Based%20to-do%20Reminder/app/src/main/res/layout/alarmlist.xml -->

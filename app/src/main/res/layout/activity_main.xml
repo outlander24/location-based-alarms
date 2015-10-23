@@ -9,26 +9,31 @@
     tools:context=".MainAct" >
 
     <Button
-        android:id="@+id/btnSetAlarm"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/btnFindThis"
-        android:onClick="OnClickSetAlarm"
-        android:text="Set Alarm" />
-
-    <Button
         android:id="@+id/btnFindThis"
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_alignLeft="@+id/btnSetAlarm"
+        android:background="@drawable/button_background_drawable"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/btnSetAlarm"
+        android:layout_marginBottom="10dp"
         android:onClick="OnClickFind"
-        android:text="Find"
-        android:textStyle="italic" />
+        android:textSize="14sp"
+        android:text="Find" />
+
+    <Button
+        android:id="@+id/btnSetAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnFindThis"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:onClick="OnClickSetAlarm"
+        android:background="@drawable/button_background_drawable"
+        android:textSize="14sp"
+        android:text="Set Alarm" />
 
     <EditText
         android:id="@+id/AddBar"

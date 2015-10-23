@@ -29,6 +29,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <service android:name=".GeofenceTransitionsIntentService"/>
+
         <activity
             android:name="com.example.googlemaps.StartScreen"
             android:label="@string/app_name"
@@ -58,7 +61,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyA8M4MowNYVR-JWlYm5e4MBzQAIuF7BGic"/>
+            android:value="AIzaSyBH8ppTUnytP9jgvJG9X2574FUN_48v6X8"/>
     </application>
 
 </manifest>

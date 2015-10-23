@@ -1,9 +1,26 @@
 package com.example.googlemaps;
 
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.location.Location;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -15,29 +32,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.ContentValues;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.Location;
-import android.os.AsyncTask;
-import android.os.Bundle;
-
-import android.preference.PreferenceManager;
-import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class MainAct extends FragmentActivity {
 	
@@ -72,15 +68,18 @@ public class MainAct extends FragmentActivity {
            // Google Play Services are available
            // Getting GoogleMap object from the fragment
            map = fm.getMap();
-           GetCurrentLocation getCurrentLocation = new GetCurrentLocation();
-           Location currentLocation = getCurrentLocation.GetLocation(this);
-           (new GetCurrentAddress(this)).execute(currentLocation);
-           map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude())));
-           map.animateCamera(CameraUpdateFactory.zoomTo(6));
-           map.addMarker(new MarkerOptions().position(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude())));
+           LocationHelper getCurrentLocation = new LocationHelper(this);
+           getCurrentLocation.fetchLocation();
  
        } 	 
 	}
+
+    public void startGettingAddress(Location currentLocation) {
+        (new GetCurrentAddress(this)).execute(currentLocation);
+        map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude())));
+        map.animateCamera(CameraUpdateFactory.zoomTo(6));
+        map.addMarker(new MarkerOptions().position(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude())));
+    }
 
     public void SetCurrentAddress(String currentAddress){
         System.out.println(currentAddress);

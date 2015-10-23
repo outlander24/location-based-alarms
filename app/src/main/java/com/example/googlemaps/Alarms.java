@@ -1,30 +1,15 @@
 package com.example.googlemaps;
 
-import java.util.ArrayList;
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.maps.model.LatLng;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.maps.model.LatLng;
 
 public class Alarms extends Activity {
 
@@ -66,11 +51,12 @@ public class Alarms extends Activity {
 
         } else {
             if (Title.isEmpty()) {
-                Title = "No Title.";
+                Title = "No todo.";
             }
             range = Float.parseFloat(rangeui.getText().toString());
             SharedPreference sharedPreference = new SharedPreference(this);
             sharedPreference.AddAlarmData(Title, address,latLng, range);
+
             Toast.makeText(Alarms.this, "Alarm has been set..:)", Toast.LENGTH_LONG).show();
             finish();
         }

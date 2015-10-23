@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".MainAct" >
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/texttitle"
-        android:layout_width="96dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/texttodo"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="18sp"
         android:layout_alignParentTop="true"
-        android:text="Title"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="To-Do:" />
 
     <EditText
         android:id="@+id/edittitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/texttitle"
+        android:layout_below="@+id/texttodo"
         android:ems="5"
         android:inputType="textMultiLine" />
 
@@ -28,9 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/edittitle"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="24dp"
         android:text="How many meters before you want the alarm to ring?"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/editrange"
@@ -38,29 +44,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textrange"
+        android:layout_marginTop="5dp"
         android:ems="5"
         android:hint="Input in METERS"
         android:inputType="number" />
 
     <TextView
         android:id="@+id/textlocation"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/editrange"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:text="Location "
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-        android:id="@+id/btnSet"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-		android:layout_alignParentBottom="true"
-        android:onClick="onClickbtnSet"
-        android:text="Set Alarm" />
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/editlocation"
@@ -69,8 +66,23 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textlocation"
+        android:layout_marginTop="5dp"
         android:inputType="textMultiLine"
-        android:height="120dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textSize="14sp"/>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btnSet"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editlocation"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_background_drawable"
+        android:onClick="onClickbtnSet"
+        android:text="Set Alarm" />
+
+    </RelativeLayout>
+
+</ScrollView>

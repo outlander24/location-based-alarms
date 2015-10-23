@@ -15,7 +15,6 @@ import android.os.PowerManager;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,7 +48,7 @@ public class AlarmReceiver extends Activity {
 				WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED |
 				WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
 		setContentView(R.layout.alarmreceiver);
-		TextView Title = (TextView) findViewById(R.id.texttitle);
+		TextView Title = (TextView) findViewById(R.id.texttodo);
 		Alarms as = new Alarms();
 		//ref = as.give();						// Getting the corresponding "INDEX" of the alarm to be rang by the Alarm Service class.
 		if(title.size()==0){

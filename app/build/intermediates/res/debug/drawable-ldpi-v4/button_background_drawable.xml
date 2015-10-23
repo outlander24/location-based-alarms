@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_pressed="false">
+        <shape>
+            <stroke
+                android:color="@android:color/black"
+                android:width="2dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <item
+        android:state_pressed="true">
+        <shape>
+            <stroke
+                android:color="@android:color/black"
+                android:width="2dp" />
+            <solid android:color="@android:color/darker_gray" />
+        </shape>
+    </item>
+</selector><!-- From: file:/Users/ashish/Dropbox%20(Personal)/Location%20Based%20to-do%20Reminder/app/src/main/res/drawable-ldpi/button_background_drawable.xml -->
