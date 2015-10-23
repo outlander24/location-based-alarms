@@ -1,0 +1,34 @@
+## directories to be ignored ##
+gen/
+bin/
+.settings/
+.apt_generated/
+
+## type of files to be ignored ##
+*~
+android-support-v4.jar
+R.java
+project.properties
+.DS_STORE
+.factorypath
+
+#Unnecessary proguard files
+app/proguard/dump.txt
+app/proguard/seeds.txt
+app/proguard/usage.txt
+
+target/
+*.iml
+*.ipr
+*.iws
+*.log
+*.class
+.idea/
+.gradle
+build/
+*.orig
+local.properties
+gradle.properties
+gradlew
+gradlew.bat
+gradle/*
