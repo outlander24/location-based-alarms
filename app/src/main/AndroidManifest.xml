@@ -55,7 +55,12 @@
            <activity
             android:name="com.example.googlemaps.MainAct"  android:screenOrientation="portrait"/>
           <activity
-            android:name="com.example.googlemaps.AlarmReceiver"  android:screenOrientation="portrait"     />    
+            android:name="com.example.googlemaps.AlarmReceiver"  android:screenOrientation="portrait"     />
+
+        <activity
+            android:name="com.example.googlemaps.NotificationActivity"  android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"     />
             
              <service android:enabled="true"  android:name="com.example.googlemaps.AlarmService" />
 

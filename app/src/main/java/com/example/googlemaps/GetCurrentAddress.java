@@ -1,14 +1,8 @@
 package com.example.googlemaps;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.os.AsyncTask;
-import android.util.Log;
-
-import com.google.android.gms.maps.model.LatLng;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -22,25 +16,21 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by ashishtotla on 30-03-2015.
  */
 public class GetCurrentAddress extends AsyncTask<Location, Void, String>{
     Context mContext;
-    ProgressDialog pdLoading;
-    public GetCurrentAddress(Context context){
+    private onLocationFetchedListener mOnLocationFetchedListener;
+
+    public GetCurrentAddress(Context context, onLocationFetchedListener onLocationFetchedListener){
         mContext = context;
-        pdLoading = new ProgressDialog(mContext);
+        mOnLocationFetchedListener = onLocationFetchedListener;
     }
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        pdLoading.setMessage("\tGetting your current location...");
-        pdLoading.setCancelable(false);
-        pdLoading.show();
     }
 
     @Override
@@ -80,8 +70,10 @@ public class GetCurrentAddress extends AsyncTask<Location, Void, String>{
 
     @Override
     protected void onPostExecute(String result) {
-        pdLoading.dismiss();
-        MainAct mainAct = new MainAct();
-        mainAct.SetCurrentAddress(result);
+        mOnLocationFetchedListener.onLocationFetched(result);
+    }
+
+    public interface onLocationFetchedListener {
+        void onLocationFetched(String result);
     }
 }

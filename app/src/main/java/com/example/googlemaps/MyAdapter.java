@@ -100,8 +100,8 @@ public class MyAdapter extends BaseAdapter implements View.OnClickListener {
                 @Override
                 public void onClick(View view) {
                     SharedPreference sharedPreference = new SharedPreference(activity);
-                    sharedPreference.RemoveAlarmData(position);
-                    UpdateData(sharedPreference.GetAlarmTitleData(), sharedPreference.GetAlarmAddressData());
+                    sharedPreference.removeAlarmData(position);
+                    UpdateData(sharedPreference.getAlarmTitleData(), sharedPreference.getAlarmAddressData());
                 }
             });
 

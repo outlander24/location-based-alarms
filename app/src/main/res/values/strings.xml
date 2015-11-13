@@ -24,5 +24,7 @@
     <string name="geofence_transition_exited">Exited</string>
     <string name="unknown_geofence_transition">Unknown Transition</string>
     <string name="geofence_transition_notification_text">Click notification to return to app</string>
+    <string name="geofences_added">Geofence Added</string>
+    <string name="geofences_removed">Geofence Removed</string>
 
 </resources>

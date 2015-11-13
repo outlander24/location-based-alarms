@@ -22,8 +22,6 @@ dependencies {
     compile 'com.android.support:support-v4:22.2.1'
 
     //Google Play Services.
-//    compile 'com.google.android.gms:play-services-gcm:7.3.0'
     compile 'com.google.android.gms:play-services-location:7.3.0'
-//    compile 'com.google.android.gms:play-services-drive:7.3.0'
     compile 'com.google.code.gson:gson:2.3.1'
 }

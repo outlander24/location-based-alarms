@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.googlemaps.GetCurrentAddress.onLocationFetchedListener;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -46,6 +47,8 @@ public class MainAct extends FragmentActivity {
 	private int totalCount=0;
     private static EditText editTextAddress;
     private SharedPreferences preferences;
+    private ProgressDialog mProgressDialog;
+    private onLocationFetchedListener mOnLocationFetchedListener;
 
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +58,11 @@ public class MainAct extends FragmentActivity {
         editTextAddress = (EditText) findViewById(R.id.AddBar);
 		preferences = PreferenceManager.getDefaultSharedPreferences(this);
         status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());
+        mProgressDialog = new ProgressDialog(this);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setTitle("Please wait");
+        mProgressDialog.setMessage("Fetching your location");
+        setUpOnLocationFetchedListener();
         // Getting reference to the SupportMapFragment of activity_main.xml
         
        SupportMapFragment fm = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -68,22 +76,33 @@ public class MainAct extends FragmentActivity {
            // Google Play Services are available
            // Getting GoogleMap object from the fragment
            map = fm.getMap();
+           mProgressDialog.show();
            LocationHelper getCurrentLocation = new LocationHelper(this);
            getCurrentLocation.fetchLocation();
  
        } 	 
 	}
 
+    private void setUpOnLocationFetchedListener() {
+        mOnLocationFetchedListener = new onLocationFetchedListener() {
+            @Override
+            public void onLocationFetched(String result) {
+                System.out.println(result);
+                mProgressDialog.dismiss();
+                editTextAddress.setText(result);
+            }
+        };
+    }
+
     public void startGettingAddress(Location currentLocation) {
-        (new GetCurrentAddress(this)).execute(currentLocation);
+        (new GetCurrentAddress(this, mOnLocationFetchedListener)).execute(currentLocation);
         map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude())));
         map.animateCamera(CameraUpdateFactory.zoomTo(6));
         map.addMarker(new MarkerOptions().position(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude())));
     }
 
     public void SetCurrentAddress(String currentAddress){
-        System.out.println(currentAddress);
-        editTextAddress.setText(currentAddress);
+
     }
 
 	public void OnClickFind(View v){
@@ -100,17 +119,14 @@ public class MainAct extends FragmentActivity {
     }
 
 	 private class FindPlace extends AsyncTask<String,Void, LatLng> {
-		 
-		 ProgressDialog pdLoading = new ProgressDialog(MainAct.this);
+
 	 	 String add=null;
 
 		 @Override
 		 protected void onPreExecute()
          {
 		     super.onPreExecute();
-		     pdLoading.setMessage("\tLoading...");
-             pdLoading.setCancelable(false);
-		     pdLoading.show();
+             mProgressDialog.show();
 		 }
 		    
 	     protected LatLng doInBackground(String... url)
@@ -158,8 +174,8 @@ public class MainAct extends FragmentActivity {
 
 	     protected void onPostExecute(LatLng result)
          {
-	         pdLoading.dismiss();
-	         latLng = result;
+	         mProgressDialog.dismiss();
+             latLng = result;
 	         if(result !=null)
 	         {
                  if(add ==null )

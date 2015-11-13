@@ -27,8 +27,8 @@ public class CardClass extends Activity {
         setContentView(R.layout.cardview);
         sharedPreference = new SharedPreference(this);
         context=this;
-        address = sharedPreference.GetAlarmAddressData();
-        title = sharedPreference.GetAlarmTitleData();
+        address = sharedPreference.getAlarmAddressData();
+        title = sharedPreference.getAlarmTitleData();
         todo = new ArrayList<String>();
 
         if(title.size()==0){

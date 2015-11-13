@@ -16,111 +16,128 @@ import java.util.List;
  */
 public class SharedPreference {
 
-    private Context context;
-    SharedPreferences sharedPreferences;
+    private Context mContext;
+    private SharedPreferences mSharedPreferences;
 
     public SharedPreference(Context context){
-        this.context =context;
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        this.mContext =context;
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
     }
 
-    public void SaveAlarmData(ArrayList<String> title, ArrayList<String> address, ArrayList<LatLng> latLng, ArrayList<Float> range){
+    public void saveAlarmData(ArrayList<String> title, ArrayList<String> address, ArrayList<LatLng> latLng, ArrayList<Float> range){
         Gson gson = new Gson();
 
-        sharedPreferences.edit().putString("TITLE",gson.toJson(title)).commit();
-        sharedPreferences.edit().putString("ADDRESS",gson.toJson(address)).commit();
-        sharedPreferences.edit().putString("LATLNG",gson.toJson(latLng)).commit();
-        sharedPreferences.edit().putString("RANGE",gson.toJson(range)).commit();
+        mSharedPreferences.edit().putString("TITLE",gson.toJson(title)).apply();
+        mSharedPreferences.edit().putString("ADDRESS",gson.toJson(address)).apply();
+        mSharedPreferences.edit().putString("LATLNG",gson.toJson(latLng)).apply();
+        mSharedPreferences.edit().putString("RANGE",gson.toJson(range)).apply();
     }
 
-    public void AddAlarmData(String title, String address, LatLng latLng, float range){
-        ArrayList<String> titleList = GetAlarmTitleData();
-        ArrayList<String> addressList = GetAlarmAddressData();
-        ArrayList<LatLng> latLngList = GetAlarmLatLngData();
-        ArrayList<Float> rangeList = GetAlarmRangeData();
+    public void addAlarmData(String title, String address, LatLng latLng, float range){
+        ArrayList<String> titleList = getAlarmTitleData();
+        ArrayList<String> addressList = getAlarmAddressData();
+        ArrayList<LatLng> latLngList = getAlarmLatLngData();
+        ArrayList<Float> rangeList = getAlarmRangeData();
 
         titleList.add(title);
         addressList.add(address);
         latLngList.add(latLng);
         rangeList.add(range);
 
-        SaveAlarmData(titleList, addressList, latLngList, rangeList);
+        saveAlarmData(titleList, addressList, latLngList, rangeList);
     }
 
-    public void RemoveAlarmData(int position){
-        ArrayList<String> titleList = GetAlarmTitleData();
-        ArrayList<String> addressList = GetAlarmAddressData();
-        ArrayList<LatLng> latLngList = GetAlarmLatLngData();
-        ArrayList<Float> rangeList = GetAlarmRangeData();
+    public void removeAlarmData(int position){
+        ArrayList<String> titleList = getAlarmTitleData();
+        ArrayList<String> addressList = getAlarmAddressData();
+        ArrayList<LatLng> latLngList = getAlarmLatLngData();
+        ArrayList<Float> rangeList = getAlarmRangeData();
 
         if(titleList.size()!=0){
             titleList.remove(position);
             addressList.remove(position);
             latLngList.remove(position);
             rangeList.remove(position);
-            SaveAlarmData(titleList, addressList, latLngList, rangeList);
+            saveAlarmData(titleList, addressList, latLngList, rangeList);
         }
     }
 
-    public ArrayList<String> GetAlarmTitleData(){
+    public void removeAlarmData(String title) {
+        ArrayList<String> titleList = getAlarmTitleData();
+        ArrayList<String> addressList = getAlarmAddressData();
+        ArrayList<LatLng> latLngList = getAlarmLatLngData();
+        ArrayList<Float> rangeList = getAlarmRangeData();
+
+        int position = titleList.indexOf(title);
+
+        if(titleList.size()!=0){
+            titleList.remove(position);
+            addressList.remove(position);
+            latLngList.remove(position);
+            rangeList.remove(position);
+            saveAlarmData(titleList, addressList, latLngList, rangeList);
+        }
+    }
+
+    public ArrayList<String> getAlarmTitleData(){
         List<String> titleList;
-        String jsonTitle = sharedPreferences.getString("TITLE",null);
+        String jsonTitle = mSharedPreferences.getString("TITLE",null);
         if(jsonTitle != null){
             Gson gson = new Gson();
             String[] title = gson.fromJson(jsonTitle,String[].class);
             titleList = Arrays.asList(title);
-            titleList = new ArrayList<String>(titleList);
+            titleList = new ArrayList<>(titleList);
         }
         else{
-            return new ArrayList<String>();
+            return new ArrayList<>();
         }
 
         return (ArrayList<String>) titleList;
     }
 
-    public ArrayList<String> GetAlarmAddressData(){
+    public ArrayList<String> getAlarmAddressData(){
         List<String> addressList;
-        String jsonAddress = sharedPreferences.getString("ADDRESS",null);
+        String jsonAddress = mSharedPreferences.getString("ADDRESS",null);
         if(jsonAddress != null){
             Gson gson = new Gson();
             String[] address = gson.fromJson(jsonAddress,String[].class);
             addressList = Arrays.asList(address);
-            addressList = new ArrayList<String>(addressList);
+            addressList = new ArrayList<>(addressList);
         }
         else{
-            return new ArrayList<String>();
+            return new ArrayList<>();
         }
 
         return (ArrayList<String>) addressList;
     }
 
-    public ArrayList<LatLng> GetAlarmLatLngData(){
+    public ArrayList<LatLng> getAlarmLatLngData(){
         List<LatLng> latLngList;
-        String jsonLatLng = sharedPreferences.getString("LATLNG",null);
+        String jsonLatLng = mSharedPreferences.getString("LATLNG",null);
         if(jsonLatLng != null){
             Gson gson = new Gson();
             LatLng[] latLng = gson.fromJson(jsonLatLng,LatLng[].class);
             latLngList = Arrays.asList(latLng);
-            latLngList = new ArrayList<LatLng>(latLngList);
+            latLngList = new ArrayList<>(latLngList);
         }
         else{
-            return new ArrayList<LatLng>();
+            return new ArrayList<>();
         }
 
         return (ArrayList<LatLng>) latLngList;
     }
 
-    public ArrayList<Float> GetAlarmRangeData(){
+    public ArrayList<Float> getAlarmRangeData(){
         List<Float> rangeList;
-        String jsonRange = sharedPreferences.getString("RANGE",null);
+        String jsonRange = mSharedPreferences.getString("RANGE",null);
         if(jsonRange != null){
             Gson gson = new Gson();
             Float[] range = gson.fromJson(jsonRange,Float[].class);
             rangeList = Arrays.asList(range);
-            rangeList = new ArrayList<Float>(rangeList);
+            rangeList = new ArrayList<>(rangeList);
         }
         else{
-            return new ArrayList<Float>();
+            return new ArrayList<>();
         }
 
         return (ArrayList<Float>) rangeList;
