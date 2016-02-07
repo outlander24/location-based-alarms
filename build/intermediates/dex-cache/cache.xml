@@ -2,67 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/classes-2cdf719f7e72c421c4adffc79925439617018831.jar" />
-    </item>
-    <item
         jar="/Users/ashish/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/gson-2.3.1-480d1cda4f13ece0d8b4cc783c03f784637158c5.jar" />
+        <dex dex="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/pre-dexed/debug/gson-2.3.1-480d1cda4f13ece0d8b4cc783c03f784637158c5.jar" />
     </item>
     <item
-        jar="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/classes-8a3cdd36aa0ad00ff1aa561f6247520b7b076ee8.jar" />
-    </item>
-    <item
-        jar="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/jars/classes.jar"
+        jar="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/classes-f0fc07b5905b6eef1a7c4f91a5b359cbbaceffbb.jar" />
+        <dex dex="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/pre-dexed/debug/classes-f23f26b5d4cc4cd4894cc6b107b3e7601beed19a.jar" />
     </item>
     <item
-        jar="/Users/ashish/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-19256d85ceb091f3db20c7eddaef0a397b2567b1.jar" />
-    </item>
-    <item
-        jar="/Users/ashish/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/gson-2.3.1-480d1cda4f13ece0d8b4cc783c03f784637158c5.jar" />
-    </item>
-    <item
-        jar="/Users/ashish/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-19256d85ceb091f3db20c7eddaef0a397b2567b1.jar" />
-    </item>
-    <item
-        jar="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-65142caf6ffbef9664d6ab88a2dace903ede46f7.jar" />
-    </item>
-    <item
-        jar="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jar="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/Users/ashish/Dropbox (Personal)/Location Based to-do Reminder/app/build/intermediates/pre-dexed/debug/classes-4edaf2d1e47de075b77f826ee109648419289a41.jar" />
+        <dex dex="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/pre-dexed/debug/classes-6745b943984c742923c3fe94af7f2f2ea11417da.jar" />
+    </item>
+    <item
+        jar="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-2b3270e3a3f25b6df465c9d7d483430177580a46.jar" />
+    </item>
+    <item
+        jar="/Users/ashish/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-19256d85ceb091f3db20c7eddaef0a397b2567b1.jar" />
+    </item>
+    <item
+        jar="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/pre-dexed/debug/classes-2fbd30608e921f5d5f873d56251d7098db7d74b8.jar" />
+    </item>
+    <item
+        jar="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="/Users/ashish/Documents/Personal/location-based-alarms/app/build/intermediates/pre-dexed/debug/classes-39bbaa7028a3f7b8b1cf48b1f3413dfd1e7f002d.jar" />
     </item>
 
 </items>
